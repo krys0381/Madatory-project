@@ -1,0 +1,36 @@
+// _buttons.scss
+%btn {
+  display: flex;
+  border-radius: 20px;
+  padding: 8px 20px;
+  margin: 20px 20px 20px 0;
+
+  &:hover {
+    transform: scale(.98);
+    color: $tertiary-color
+  }
+}
+
+.btn-primary {
+  @extend %btn;
+  background-color: $primary-color;
+  color: $light-color;
+  font-weight: bold;
+  font-size: larger;
+  width: 200px;
+  justify-content: center
+}
+
+.btn-secondary {
+  @extend %btn;
+  background-color: $tertiary-color;
+  color: $primary-color;
+  font-weight: bold;
+  justify-content: center;
+  width: 150px;
+
+  &:hover {
+    transform: scale(.98);
+    color: $light-color
+  }
+}
