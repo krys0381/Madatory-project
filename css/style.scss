@@ -24,10 +24,14 @@ a {
   color: $secondary-color;
 }
 
+
 header {
   background-color: $primary-color;
   display: flex;
   flex-wrap: wrap;
+  position: sticky;
+  
+  top: 0;
   gap: $grid-gutter;
   max-width: $width-type; // Change for full width or a set width -> in config file
   width: $width-type;
@@ -88,7 +92,6 @@ main {
  // padding:10px;
   display: flex;
   flex-wrap: wrap;
-  gap: $grid-gutter;
   max-width: $width-type; // Change for full width or a set width -> in config file
   width: $width-type;
   // import pages?
@@ -108,10 +111,15 @@ section {
 
 #tina {
   height: 100%;
+
+  img {
+    object-fit: fill;
+  }
 }
 
 #about {
   background-color: $secondary-color;
+  height: 654px;
 }
 
 #read {
@@ -123,9 +131,9 @@ section {
   flex-direction: column;
 }
 
-// #read-more-btn {
-//   margin: 20px 20px 0 0;
-// }
+#read-more-btn {
+  margin: 20px 20px 0 0;
+}
 
 #program {
   background-color: $tertiary-color;
@@ -133,11 +141,18 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: $full-width;
+  height: 653px;
+  scroll-padding-top: 200px;
 }
 
 table {
   border-collapse: collapse;
   background-color: $tertiary-color;
+}
+
+#no-border {
+  border-bottom: none;
 }
 
 th {
@@ -146,21 +161,39 @@ th {
   padding: 10px;
   border-right: 2px solid $primary-color;
   border-bottom: 2px solid $primary-color;
+  width: 400px;
+}
+
+th:last-child {
+  border-right: none;
 }
 
 td {
   border-bottom: 1px solid $secondary-color;
   border-right: 2px solid $primary-color;
+  border-left: 2px solid $primary-color;
   color: $primary-color;
   text-align: center;
   padding: 10px;
+}
+
+#same-author {
+  column-span: 3;
+}
+
+td:first-child {
+  border-left: none;
+}
+
+td:last-child {
+  border-right: none;
 }
 
 // #full-program-btn {
 //   margin: 20px 20px 20px 0;
 // }
 
-#dates-tickets-background {
+#dates-tickets {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -173,6 +206,7 @@ td {
   align-items: center;
   justify-content: center;
   background-color: transparent;
+  height: 500px;
 }
 
 #dates {
@@ -184,8 +218,8 @@ td {
   ul {
     display: flex;
     list-style-type: none;
-    margin: 31px 0;
-    padding: 0;
+    margin: 23px 0;
+    padding: 4px 0;
     overflow: hidden;
     font-weight: bold;
     border-radius: 20px;
@@ -235,39 +269,58 @@ td {
 //   margin: 20px 20px 20px 0;
 // }
 
+#head-text {
+  margin: 0 0 30px 0;
+}
+
 #newsletter {
   background-color: $secondary-color;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  height: 400px;
 }
 
 #newsletter-container {
   display: flex;
   justify-content: center;
+  align-items: center;
+  background-color: $tertiary-color;
 }
 
 #description {
   background-color: $tertiary-color;
   font-weight: bold;
   text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+#description-text {
+  width: 90%;
 }
 
 #subscribe {
   background-color: $primary-color;
+  display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 250px;
 }
 
 input[type=text] {
-  padding: 12px 20px;
+  padding: 12px 18px;
   margin: 9px 0;
   box-sizing: border-box;
   border-radius: 20px;
   outline: none;
-  width: 100%;
+  width: 300px;
   border: none;
+  text-align: center;
   background-color: $tertiary-color;
 }
 
@@ -275,14 +328,14 @@ input[type=text] {
   color: $primary-color;
   opacity: 1;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 20px;
   text-align: center;
   font-family: "Montserrat";
 }
 
 footer {
   background-color: $primary-color;
-  height: 300px;
+  height: 175px;
   width: $full-width;
   display: flex;
   align-items: center;
@@ -300,7 +353,7 @@ footer {
     background-color: $primary-color;
 
     .fab {
-      padding: 14px 16px;
+      margin: 14px 16px;
       color: $light-color;
 
       &:hover {
