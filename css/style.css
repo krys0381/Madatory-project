@@ -342,9 +342,6 @@ header {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
   gap: 10px;
   max-width: 100%;
   width: 100%;
