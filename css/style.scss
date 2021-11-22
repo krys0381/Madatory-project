@@ -30,7 +30,8 @@ header {
   display: flex;
   flex-wrap: wrap;
 
-
+  // position: sticky;
+  // top: 0;
 
   gap: $grid-gutter;
   max-width: $width-type; // Change for full width or a set width -> in config file
@@ -259,6 +260,7 @@ td:last-child {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 30px 0;
 }
 
 #photos {
@@ -291,8 +293,8 @@ td:last-child {
 
 #description {
   background-color: $tertiary-color;
-  font-weight: bold;
-  text-align: center;
+  font-weight: 100;
+  text-align: justify;
   justify-content: center;
   align-items: center;
   width: 100%;

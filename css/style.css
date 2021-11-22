@@ -631,6 +631,7 @@ td:last-child {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding: 30px 0;
 }
 
 #photos {
@@ -677,8 +678,8 @@ td:last-child {
 
 #description {
   background-color: #FFB437;
-  font-weight: bold;
-  text-align: center;
+  font-weight: 100;
+  text-align: justify;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
